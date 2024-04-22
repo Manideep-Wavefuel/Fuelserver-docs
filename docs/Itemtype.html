@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>ItemType - Documentation</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ticlekiwi" />
+
+		<meta http-equiv="cleartype" content="on" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/hightlightjs-dark.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" media="all" />
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+	</head>
+
+	<body class="one-content-column-version">
+		<div class="left-menu">
+			<div class="content-logo">
+				<div class="logo">
+					<img
+						alt="platform by Emily van den Heever from the Noun Project"
+						title="platform by Emily van den Heever from the Noun Project"
+						src="images/logo.png"
+						height="32"
+					/>
+					<span>ItemType Document</span>
+				</div>
+				<button class="burger-menu-icon" id="button-menu-mobile">
+					<svg width="34" height="34" viewBox="0 0 100 100">
+						<path
+							class="line line1"
+							d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+						></path>
+						<path class="line line2" d="M 20,50 H 80"></path>
+						<path
+							class="line line3"
+							d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+						></path>
+					</svg>
+				</button>
+			</div>
+			<div class="content-infos"><a class="info" href="index.html" style="font-weight: bold; color: #034c8f">&larr; Home</a></div>
+			<div class="mobile-menu-closer"></div>
+			<div class="content-menu">
+				<div class="content-infos">
+					<div class="info"><b>Version:</b> 1.0.1</div>
+					<div class="info"><b>Last Updated:</b> 19th Jan, 2024</div>
+				</div>
+
+				<nav>
+					<ul>
+						<li class="scroll-to-link active">
+							<a style="font-weight: bold">I. Navigation</a>
+						</li>
+						<li>
+							<a href="./Parameter.html">1. Parameter</a>
+						</li>
+						<li>
+							<a href="./CommunicationPolicy.html">2. Communication Policy</a>
+						</li>
+						<li>
+							<a href="./Item.html">3. Item</a>
+						</li>
+						<li>
+							<a href="./Device.html">4. Device</a>
+						</li>
+						<li>
+							<a href="./Action.html">5. Action</a>
+						</li>
+					</ul>
+				</nav>
+
+				<ul>
+					<li class="scroll-to-link active" data-target="get-started">
+						<a style="font-weight: bold">II. API</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-ItemType">
+						<a>1. Create ItemType</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-many-ItemTypes">
+						<a>2. Create Many ItemTypes</a>
+					</li>
+					<li class="scroll-to-link" data-target="read-ItemType">
+						<a>3. Read ItemType</a>
+					</li>
+					<li class="scroll-to-link" data-target="read-many-ItemTypes">
+						<a>4. Read Many ItemType</a>
+					</li>
+					<li class="scroll-to-link" data-target="update-ItemType">
+						<a>5. Update ItemTypes</a>
+					</li>
+					<li class="scroll-to-link" data-target="update-many-ItemTypes">
+						<a>6. Update Many ItemType</a>
+					</li>
+					<li class="scroll-to-link" data-target="delete-ItemType">
+						<a>7. Delete ItemType</a>
+					</li>
+					<li class="scroll-to-link" data-target="delete-many-ItemTypes">
+						<a>8. Delete Many ItemTypes</a>
+					</li>
+					<li class="scroll-to-link" data-target="errors">
+						<a style="font-weight: bold">III. Errors</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="content">
+				<div class="overflow-hidden content-section" id="get-started">
+					<h1>Item Type</h1>
+					<p>
+						<strong>Item Type</strong> define common properties and functionalities that multiple items of the same type share. For
+						example, an "Item Type" could be "Light Bulb," which would define properties like brightness, color temperature, and on/off
+						state.
+					</p>
+					<p>
+						This documents helps you to understand and implement ItemType. These APIs are specialized tools that help you to perform
+						certain operations on ItemType.
+					</p>
+					<p>
+						With the Help of these APIs you can create, read, update, and delete ItemType. The below is the API documentation which
+						contains API url paths, message structure and the description on what the API does. If there is any issue, you can refer to
+						the <strong class="scroll-to-link" data-target="errors">Errors</strong> section to get good insights on the error.
+					</p>
+				</div>
+				<hr />
+				<div class="overflow-hidden content-section" id="create-ItemType">
+					<h2>1. Create Itemtype</h2>
+					<p>
+						This API is used to create a ItemType. It takes the below mentioned API parameters as input and returns the newly created
+						ItemType and its aws thing type in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/itemType/create/one → {ItemTypeAndThingTypeResult} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>name</td>
+								<td>string</td>
+								<td></td>
+								<td>The name of the itemtype. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>vendorId</td>
+								<td>string</td>
+								<td></td>
+								<td>The vendor ID associated with the itemtype. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>description</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) Description of the itemType.</td>
+							</tr>
+							<tr>
+								<td>parameterIds</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>optional</td>
+								<td>(Optional) Parameter IDs associated with the itemType.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="create-many-ItemTypes">
+					<h2>2. Create Many Item types</h2>
+					<p>
+						This API is used to create multiple ItemTypes. It takes the below mentioned API parameters as input and returns the newly
+						created ItemTypes and their AWS thing types in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/itemType/create/many → {Array.&lt;ItemTypeAndThingTypeResult&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of itemtype input object</td>
+							</tr>
+							<tr>
+								<td>data[].name</td>
+								<td>string</td>
+								<td></td>
+								<td>The name of the itemType. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].vendorId</td>
+								<td>string</td>
+								<td></td>
+								<td>The vendor ID associated with the itemtype. Must be a non-empty string</td>
+							</tr>
+							<tr>
+								<td>data[].description</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) Description of the itemType.</td>
+							</tr>
+							<tr>
+								<td>data[].parameterIds</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>optional</td>
+								<td>(Optional) Parameter IDs associated with the itemType.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="read-ItemType">
+					<h2>3. Read Item Type</h2>
+					<p>
+						This API is used to read a ItemType. It takes the parameter Id as input in the url and returns the requested ItemType in
+						response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:itemTypeId</strong> should be replaced with the Id of the ItemType.<br /><br />
+						<code class="higlighted break-word">GET /api/:organizationId/itemType/read/one/:itemTypeId → {ItemType} </code>
+					</p>
+					<br />
+				</div>
+				<div class="overflow-hidden content-section" id="read-many-ItemTypes">
+					<h2>4. Read Many Itemtypes</h2>
+					<p>
+						This API is used to read multiple ItemTypes. It takes below parameters as input and return the ItemTypes in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/itemType/read/many → {Array.&lt;ItemType&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>where</td>
+								<td>Object</td>
+								<td></td>
+								<td>The condition object for querying records with itemtype fields.</td>
+							</tr>
+							<tr>
+								<td>orderBy</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>Use orderBy to sort a list of records or a nested list of records by a particular field or set of fields.</td>
+							</tr>
+							<tr>
+								<td>select</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>Use select to return specific fields by assigning true to it.</td>
+							</tr>
+							<tr>
+								<td>skip</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>uses skip to skip a certain number of results</td>
+							</tr>
+							<tr>
+								<td>take</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>uses take to select a limited range</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="update-ItemType">
+					<h2>5. Update Item Type</h2>
+					<p>
+						This API is used to update a ItemType and return the updated ItemType in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:itemTypeId</strong> should be replaced with the Id of the ItemType.
+						<br /><br />
+						<code class="higlighted break-word">PATCH /api/:organizationId/itemType/update/one/:itemTypeId → {ItemType} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>name</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>The name of the itemtype must be a non-empty string</td>
+							</tr>
+							<tr>
+								<td>description</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) Description of the itemType.</td>
+							</tr>
+							<tr>
+								<td>parameterIds</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>optional</td>
+								<td>((Optional) Itemtype IDs associated with the itemType.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="update-many-ItemTypes">
+					<h2>6. Update Many Item Types</h2>
+					<p>
+						This API is used to update a ItemTypes and return the updated ItemTypes in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">PATCH /api/:organizationId/itemType/update/many → {Array.&lt;ItemType&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of itemType input object.</td>
+							</tr>
+							<tr>
+								<td>data[].id</td>
+								<td>string</td>
+								<td></td>
+								<td>The id of the itemtype. Must be a non-empty string</td>
+							</tr>
+							<tr>
+								<td>data[].name</td>
+								<td>string</td>
+								<td></td>
+								<td>(Optional) The name of the Itemtype. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].description</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) Description of the itemType.</td>
+							</tr>
+							<tr>
+								<td>data[].parameterIds</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>optional</td>
+								<td>(Optional) Parameter IDs associated with the itemType.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="delete-ItemType">
+					<h2>7. Delete ItemType</h2>
+					<p>
+						This API is used to delete a ItemType and return the deleted ItemType in response.<br /><strong>:itemTypeId</strong>
+						should be replaced with the Id of the ItemType.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">DELETE /api/:organizationId/itemType/delete/one/:itemTypeId → {ItemType} </code>
+					</p>
+					<br />
+				</div>
+
+				<div class="overflow-hidden content-section" id="delete-many-ItemTypes">
+					<h2>8. Delete Many Item Types</h2>
+					<p>
+						This API is used to delete multiple ItemTypes and return the deleted ItemTypes in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">DELETE /api/:organizationId/itemType/delete/many → {ItemType} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ids</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>Array of ItemType Ids to be deleted.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="errors">
+					<h2>Errors</h2>
+					<p>These above APIs might run into errors sometime, here below are the different errors:</p>
+					<p><strong>Throw - Type:</strong> Error</p>
+				</div>
+
+				<div class="overflow-hidden content-section" id="errors">
+					<h2>Type Definition</h2>
+					<p><strong>ItemTypeAndThingTypeResult</strong></p>
+					<p><strong>Type:</strong> Object</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Number</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ItemType</td>
+								<td>itemType</td>
+								<td>The Parameter object.</td>
+							</tr>
+							<tr>
+								<td>ThingType</td>
+								<td>ThingType</td>
+								<td>The Vendor object.</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Number</th>
+								<th>Return Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>ItemTypeAndThingTypeResult</td>
+								<td>Express Response object includes Parameter and Vendor for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Array.&lt;ItemTypeAndThingTypeResult&gt;</td>
+								<td>Express Response object includes Parameter and Vendor for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>ItemType</td>
+								<td>Express Response object includes ItemType for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Array.&lt;ItemType&gt;</td>
+								<td>Express Response object includes ItemType for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>ItemType</td>
+								<td>Express Response object includes ItemType for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Array.&lt;ItemType&gt;</td>
+								<td>Express Response object includes itemType for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>ItemType</td>
+								<td>Express Response object includes ItemType for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>ItemType</td>
+								<td>Express Response object includes ItemType for sending the server response.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

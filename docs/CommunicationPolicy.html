@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Communication Policy - Documentation</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ticlekiwi" />
+
+		<meta http-equiv="cleartype" content="on" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/hightlightjs-dark.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" media="all" />
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+	</head>
+
+	<body class="one-content-column-version">
+		<div class="left-menu">
+			<div class="content-logo">
+				<div class="logo">
+					<img
+						alt="platform by Emily van den Heever from the Noun Project"
+						title="platform by Emily van den Heever from the Noun Project"
+						src="images/logo.png"
+						height="32"
+					/>
+					<span>Communication Policy</span>
+				</div>
+				<button class="burger-menu-icon" id="button-menu-mobile">
+					<svg width="34" height="34" viewBox="0 0 100 100">
+						<path
+							class="line line1"
+							d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+						></path>
+						<path class="line line2" d="M 20,50 H 80"></path>
+						<path
+							class="line line3"
+							d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+						></path>
+					</svg>
+				</button>
+			</div>
+			<div class="content-infos"><a class="info" href="index.html" style="font-weight: bold; color: #034c8f">&larr; Home</a></div>
+			<div class="mobile-menu-closer"></div>
+			<div class="content-menu">
+				<div class="content-infos">
+					<div class="info"><b>Version:</b> 1.0.1</div>
+					<div class="info"><b>Last Updated:</b> 19th Jan, 2024</div>
+				</div>
+
+				<nav>
+					<ul>
+						<li class="scroll-to-link active">
+							<a style="font-weight: bold">I. Navigation</a>
+						</li>
+						<li>
+							<a href="./Parameter.html">1. Parameter</a>
+						</li>
+						<li>
+							<a href="./ItemType.html">2. Item Type</a>
+						</li>
+						<li>
+							<a href="./Item.html">3. Item</a>
+						</li>
+						<li>
+							<a href="./Device.html">4. Device</a>
+						</li>
+						<li>
+							<a href="./Action.html">5. Action</a>
+						</li>
+					</ul>
+				</nav>
+
+				<ul>
+					<li class="scroll-to-link active" data-target="get-started">
+						<a style="font-weight: bold">II. API</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-CommunicationPolicy">
+						<a>1. Create Communication Policy</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-MessagingPolicy">
+						<a>2. Create Messaging Policy</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-many-CommunicationPolicies">
+						<a>3. Create Many Communication Policies</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-many-MessagingPolicies">
+						<a>4. Create Many Messaging Policies</a>
+					</li>
+					<li class="scroll-to-link" data-target="read-CommunicationPolicy">
+						<a>5. Read Communication Policy</a>
+					</li>
+					<li class="scroll-to-link" data-target="read-MessagingPolicy">
+						<a>6. Read Messaging Policy</a>
+					</li>
+					<li class="scroll-to-link" data-target="read-many-CommunicationPolicies">
+						<a>7. Read Many Communication Policies</a>
+					</li>
+					<li class="scroll-to-link" data-target="update-CommunicationPolicy">
+						<a>8. Update Communication Policy</a>
+					</li>
+					<li class="scroll-to-link" data-target="update-MessagingPolicy">
+						<a>9. Update Messaging Policy</a>
+					</li>
+					<li class="scroll-to-link" data-target="update-many-CommunicationPolicies">
+						<a>10. Update Many Communication Policies</a>
+					</li>
+					<li class="scroll-to-link" data-target="update-many-MessagingPolicies">
+						<a>11. Update Many Messaging Policies</a>
+					</li>
+					<li class="scroll-to-link" data-target="delete-CommunicationPolicy">
+						<a>12. Delete Communication Policy</a>
+					</li>
+					<li class="scroll-to-link" data-target="delete-MessagingPolicy">
+						<a>13. Delete Messaging Policy</a>
+					</li>
+					<li class="scroll-to-link" data-target="delete-many-CommunicationPolicies">
+						<a>14. Delete Many Communication Policies</a>
+					</li>
+					<li class="scroll-to-link" data-target="delete-many-MessagingPolicies">
+						<a>15. Delete Many Messaging Policies</a>
+					</li>
+					<li class="scroll-to-link" data-target="errors">
+						<a style="font-weight: bold">III. Errors</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="content">
+				<div class="overflow-hidden content-section" id="get-started">
+					<h1>Communication Policy</h1>
+					<p>
+						<strong>Communication Policies</strong> are rules or guidelines that helps the server to understand how to communicate with a
+						device. They define things like messaging policies, routing rules, and security protocols. For example, a communication policy
+						might specify how can a server turn off/on or change the color or change the brightness of a "Light Bulb".
+					</p>
+					<p>
+						This documents helps you to understand and implement Communication Policy. These APIs are specialized tools that help you to
+						perform certain operations on Communication Policy.
+					</p>
+					<p>
+						With the Help of these APIs you can create, read, update, and delete Communication Policy. The below is the API documentation
+						which contains API url paths, message structure and the description on what the API does. If there is any issue, you can refer
+						to the <strong class="scroll-to-link" data-target="errors">Errors</strong> section to get good insights on the error.
+					</p>
+				</div>
+				<hr />
+				<div class="overflow-hidden content-section" id="create-CommunicationPolicy">
+					<h2>1. Create Communication Policy</h2>
+					<p>
+						This API is used to create a Communication Policy. It takes the below mentioned API parameters as input and returns the newly
+						created Communication Policy and its aws thing type in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word"
+							>POST /api/:organizationId/communicationPolicy/create/one → {communicationPolicyAndBaseMessagingPoliciesResult}
+						</code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>name</td>
+								<td>string</td>
+								<td></td>
+								<td>The name of the communication policy. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>protocol</td>
+								<td>string</td>
+								<td></td>
+								<td>The communication protocol. Must be a non-empty string and one of the valid protocol types.</td>
+							</tr>
+							<tr>
+								<td>itemTypeId</td>
+								<td>string</td>
+								<td></td>
+								<td>The ID of the associated item type. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>isFirmwareControlled</td>
+								<td>boolean | undefined</td>
+								<td>optional</td>
+								<td>(Optional) Indicates whether firmware is controlled. Must be a boolean value (optional).</td>
+							</tr>
+							<tr>
+								<td>messageStructure</td>
+								<td>string</td>
+								<td></td>
+								<td>The message structure of communication policy must be non empty string</td>
+							</tr>
+							<tr>
+								<td>confMessageStructure</td>
+								<td>string</td>
+								<td></td>
+								<td>The confirmation message structure of communication policy must be non empty string</td>
+							</tr>
+							<tr>
+								<td>defaultConfMessage</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The default confirmation message structure of communication policy</td>
+							</tr>
+							<tr>
+								<td>messageFormat</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The message format of communication policy ID</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="overflow-hidden content-section" id="create-MessagingPolicy">
+					<h2>2. Create Messaging Policy</h2>
+					<p>
+						This API is used to create a Messaging Policy. It takes the below mentioned API parameters as input and returns the newly
+						created Messaging Policy and its aws thing type in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br /><br />
+						<code class="higlighted break-word"
+							>POST /api/:organizationId/communicationPolicy/create/one/:communicationPolicyId/messagingPolicy → {MessagingPolicy}
+						</code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>topic</td>
+								<td>string</td>
+								<td></td>
+								<td>The topic name. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>QOS</td>
+								<td>number</td>
+								<td></td>
+								<td>The Quality of Service (QOS) level. Must be an integer in the range 0-3, and is required.</td>
+							</tr>
+							<tr>
+								<td>messageType</td>
+								<td>
+									"ON_OFF" | "SET_ADJUST" | "GETDATA" | "TOGGLE" <br />| "CONTROL" | "CONNECTION" | "START_STOP" | "LOCK_UNLOCK"
+									<br />| "ARM_DISARM" | "EMERGENCY" | "PLAYBACK" | "QUERY" <br />| "CALIBRATION" | "DIAGNOSTIC" | "UPDATE" |
+									"STATUS" <br />| "NOTIFICATION" | "CONFIGURATION" | "AUTHENTICATE" | "GROUPING" <br />| "SCENE" | "GEOFENCING" |
+									"SESSION"
+								</td>
+								<td></td>
+								<td>The message type. Must be a non-empty string and one of the valid message types.</td>
+							</tr>
+							<tr>
+								<td>policyType</td>
+								<td>"BOOT" | "SYNC" | "QUERY" | "EXECUTE"</td>
+								<td></td>
+								<td>The policy type. Must be a non-empty string and one of the valid policy types.</td>
+							</tr>
+							<tr>
+								<td>parameterIds</td>
+								<td>Array.&lt;string&gt;</td>
+								<td></td>
+								<td>An array of parameter IDs.</td>
+							</tr>
+							<tr>
+								<td>payloadFormat</td>
+								<td>string</td>
+								<td></td>
+								<td>The payload format. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>confPayloadFormat</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>The confirmation payload format. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>commandType</td>
+								<td>"SUBSCRIBE" | "PUBLISH" | "POST" | "GET"</td>
+								<td>optional</td>
+								<td>(Optional) The command type. Must be a string and one of the valid command types.</td>
+							</tr>
+							<tr>
+								<td>retain</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) Indicates whether the message should be retained.</td>
+							</tr>
+							<tr>
+								<td>messageExpiry</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The message expiry. Must be an integer.</td>
+							</tr>
+							<tr>
+								<td>correlationData</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The correlation data. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>frequency</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The frequency. Must be an integer.</td>
+							</tr>
+							<tr>
+								<td>isLoggedMessage</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The frequency. Must be an integer.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="overflow-hidden content-section" id="create-many-CommunicationPolicies">
+					<h2>3. Create Many Communication Policies</h2>
+					<p>
+						This API is used to create multiple Communication Policies. It takes the below mentioned API parameters as input and returns
+						the newly created Communication Policies and their AWS thing types in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word"
+							>POST /api/:organizationId/communicationPolicy/create/many → {Array.&lt;communicationPolicyAndBaseMessagingPoliciesResult&gt;}
+						</code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of communication policy input object.</td>
+							</tr>
+							<tr>
+								<td>data[].name</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>The name of the communication policy. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].protocol</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>The communication protocol. Must be a non-empty string and one of the valid protocol types.</td>
+							</tr>
+							<tr>
+								<td>data[].itemTypeId</td>
+								<td>string</td>
+								<td></td>
+								<td>The ID of the associated item type. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].isFirmwareControlled</td>
+								<td>boolean | undefined</td>
+								<td>optional</td>
+								<td>(Optional) Indicates whether firmware is controlled. Must be a boolean value (optional).</td>
+							</tr>
+							<tr>
+								<td>data[].messageStructure</td>
+								<td>string</td>
+								<td></td>
+								<td>The message structure of communication policy must be non empty string</td>
+							</tr>
+							<tr>
+								<td>data[].confMessageStructure</td>
+								<td>string</td>
+								<td></td>
+								<td>The confirmation message structure of communication policy must be non empty string</td>
+							</tr>
+							<tr>
+								<td>data[].defaultConfMessage</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The default confirmation message structure of communication policy</td>
+							</tr>
+							<tr>
+								<td>data[].messageFormat</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The message format of communication policy ID</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="overflow-hidden content-section" id="create-many-MessagingPolicies">
+					<h2>4. Create Many Messaging Policies</h2>
+					<p>
+						This API is used to create multiple Messaging Policies. It takes the below mentioned API parameters as input and returns the
+						newly created Messaging Policies and their AWS thing types in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br /><br />
+						<code class="higlighted break-word"
+							>POST /api/:organizationId/communicationPolicy/create/many/:communicationPolicyId/messagingPolicy → {Array.&lt;MessagingPolicy&gt;}
+						</code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of messaging policy input object.</td>
+							</tr>
+							<tr>
+								<td>data[].topic</td>
+								<td>string</td>
+								<td></td>
+								<td>The topic name. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].QOS</td>
+								<td>number</td>
+								<td></td>
+								<td>The Quality of Service (QOS) level. Must be an integer in the range 0-3, and is required.</td>
+							</tr>
+							<tr>
+								<td>data[].messageType</td>
+								<td>
+									"ON_OFF" | "SET_ADJUST" | "GETDATA" | "TOGGLE" <br />| "CONTROL" | "CONNECTION" | "START_STOP" | "LOCK_UNLOCK"
+									<br />| "ARM_DISARM" | "EMERGENCY" | "PLAYBACK" | "QUERY" <br />| "CALIBRATION" | "DIAGNOSTIC" | "UPDATE" |
+									"STATUS" <br />| "NOTIFICATION" | "CONFIGURATION" | "AUTHENTICATE" | "GROUPING" <br />| "SCENE" | "GEOFENCING" |
+									"SESSION"
+								</td>
+								<td></td>
+								<td>The message type. Must be a non-empty string and one of the valid message types.</td>
+							</tr>
+							<tr>
+								<td>data[].policyType</td>
+								<td>"BOOT" | "SYNC" | "QUERY" | "EXECUTE"</td>
+								<td></td>
+								<td>The policy type. Must be a non-empty string and one of the valid policy types.</td>
+							</tr>
+							<tr>
+								<td>data[].parameterIds</td>
+								<td>Array.&lt;string&gt;</td>
+								<td></td>
+								<td>An array of parameter IDs.</td>
+							</tr>
+							<tr>
+								<td>data[].payloadFormat</td>
+								<td>string</td>
+								<td></td>
+								<td>The payload format. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>data[].confPayloadFormat</td>
+								<td>string</td>
+								<td></td>
+								<td>The confirmation payload format. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>data[].commandType</td>
+								<td>"SUBSCRIBE" | "PUBLISH" | "POST" | "GET"</td>
+								<td>optional</td>
+								<td>(Optional) The command type. Must be a string and one of the valid command types.</td>
+							</tr>
+							<tr>
+								<td>data[].retain</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) Indicates whether the message should be retained.</td>
+							</tr>
+							<tr>
+								<td>data[].messageExpiry</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The message expiry. Must be an integer.</td>
+							</tr>
+							<tr>
+								<td>data[].correlationData</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The correlation data. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>data[].frequency</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The frequency. Must be an integer.</td>
+							</tr>
+							<tr>
+								<td>data[].isLoggedMessage</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The frequency. Must be an integer.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="read-CommunicationPolicy">
+					<h2>5. Read Communication Policy</h2>
+					<p>
+						This API is used to read a Communication Policy. It takes the parameter Id as input in the url and returns the requested
+						Communication Policy in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br /><br />
+						<code class="higlighted break-word"
+							>GET /api/:organizationId/communicationPolicy/read/one/:communicationPolicyId → {CommunicationPolicy}
+						</code>
+					</p>
+					<br />
+				</div>
+
+				<div class="overflow-hidden content-section" id="read-MessagingPolicy">
+					<h2>6. Read Messaging Policy</h2>
+					<p>
+						This API is used to read a Messaging Policy. It takes the parameter Id as input in the url and returns the requested Messaging
+						Policy in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br />
+						<strong>:messagingPolicyId</strong> should be replaced with the Id of the Messaging Policy.<br /><br />
+						<code class="higlighted break-word"
+							>GET /api/:organizationId/communicationPolicy/read/one/:communicationPolicyId/:messagingPolicyId → {MessagingPolicy}
+						</code>
+					</p>
+					<br />
+				</div>
+				<div class="overflow-hidden content-section" id="read-many-CommunicationPolicies">
+					<h2>7. Read Many Communication Policies</h2>
+					<p>
+						This API is used to read multiple Communication Policies. It takes below parameters as input and return the CommunicationPolicies in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/communicationPolicy/read/many → {Array.&lt;CommunicationPolicy&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>where</td>
+								<td>Object</td>
+								<td></td>
+								<td>The condition object for querying records with communication policy fields.</td>
+							</tr>
+							<tr>
+								<td>orderBy</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>Use orderBy to sort a list of records or a nested list of records by a particular field or set of fields.</td>
+							</tr>
+							<tr>
+								<td>select</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>Use select to return specific fields by assigning true to it.</td>
+							</tr>
+							<tr>
+								<td>skip</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>uses skip to skip a certain number of results</td>
+							</tr>
+							<tr>
+								<td>take</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>uses take to select a limited range</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="update-CommunicationPolicy">
+					<h2>8. Update Communication Policy</h2>
+					<p>
+						This API is used to update a Communication Policy and return the updated Communication Policy in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong>should be replaced with the Id of the Communication Policy.<br /><br />
+						<code class="higlighted break-word"
+							>PATCH /api/:organizationId/communicationPolicy/update/one/:communicationPolicyId → {CommunicationPolicy}
+						</code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>name</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The name of the communication policy. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>protocol</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The communication protocol. Must be a non-empty string and one of the valid protocol types.</td>
+							</tr>
+							<tr>
+								<td>itemTypeId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The ID of the associated item type. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>isFirmwareControlled</td>
+								<td>boolean | undefined</td>
+								<td>optional</td>
+								<td>(Optional) Indicates whether firmware is controlled. Must be a boolean value (optional).</td>
+							</tr>
+							<tr>
+								<td>messageStructure</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The message structure of communication policy must be non empty string</td>
+							</tr>
+							<tr>
+								<td>confMessageStructure</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The confirmation message structure of communication policy must be non empty string</td>
+							</tr>
+							<tr>
+								<td>defaultConfMessage</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The default confirmation message structure of communication policy</td>
+							</tr>
+							<tr>
+								<td>messageFormat</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The message format of communication policy ID</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="overflow-hidden content-section" id="update-MessagingPolicy">
+					<h2>9. Update Messaging Policy</h2>
+					<p>
+						This API is used to update a Messaging Policy and return the updated Messaging Policy in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br />
+						<strong>:messagingPolicyId</strong> should be replaced with the Id of the Messaging Policy.<br /><br />
+						<code class="higlighted break-word"
+							>PATCH /api/:organizationId/communicationPolicy/update/one/:communicationPolicyId/:messagingPolicyId → {MessagingPolicy}
+						</code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>topic</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The topic name. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>QOS</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The Quality of Service (QOS) level. Must be an integer in the range 0-3, and is required.</td>
+							</tr>
+							<tr>
+								<td>messageType</td>
+								<td>
+									"ON_OFF" | "SET_ADJUST" | "GETDATA" | "TOGGLE" <br />| "CONTROL" | "CONNECTION" | "START_STOP" | "LOCK_UNLOCK"
+									<br />| "ARM_DISARM" | "EMERGENCY" | "PLAYBACK" | "QUERY" <br />| "CALIBRATION" | "DIAGNOSTIC" | "UPDATE" |
+									"STATUS" <br />| "NOTIFICATION" | "CONFIGURATION" | "AUTHENTICATE" | "GROUPING" <br />| "SCENE" | "GEOFENCING" |
+									"SESSION"
+								</td>
+								<td>optional</td>
+								<td>(Optional) The message type. Must be a non-empty string and one of the valid message types.</td>
+							</tr>
+							<tr>
+								<td>policyType</td>
+								<td>"BOOT" | "SYNC" | "QUERY" | "EXECUTE"</td>
+								<td>optional</td>
+								<td>(Optional) The policy type. Must be a non-empty string and one of the valid policy types.</td>
+							</tr>
+							<tr>
+								<td>parameterIds</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>optional</td>
+								<td>(Optional) An array of parameter IDs.</td>
+							</tr>
+							<tr>
+								<td>payloadFormat</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The payload format. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>confPayloadFormat</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The confirmation payload format. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>commandType</td>
+								<td>"SUBSCRIBE" | "PUBLISH" | "POST" | "GET"</td>
+								<td>optional</td>
+								<td>(Optional) The command type. Must be a string and one of the valid command types.</td>
+							</tr>
+							<tr>
+								<td>retain</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) Indicates whether the message should be retained.</td>
+							</tr>
+							<tr>
+								<td>messageExpiry</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The message expiry. Must be an integer.</td>
+							</tr>
+							<tr>
+								<td>correlationData</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The correlation data. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>frequency</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The frequency. Must be an integer.</td>
+							</tr>
+							<tr>
+								<td>isLoggedMessage</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The frequency. Must be an integer.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="update-many-CommunicationPolicies">
+					<h2>10. Update Many Communication Policy</h2>
+					<p>
+						This API is used to update a Communication Policies and return the updated Communication Policies in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">PATCH /api/:organizationId/communicationPolicy/update/many → {Array.&lt;CommunicationPolicy&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of communication policy input object.</td>
+							</tr>
+							<tr>
+								<td>data[].name</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>The name of the communication policy. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].protocol</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>The communication protocol. Must be a non-empty string and one of the valid protocol types.</td>
+							</tr>
+							<tr>
+								<td>data[].itemTypeId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>The ID of the associated item type. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].isFirmwareControlled</td>
+								<td>boolean | undefined</td>
+								<td>optional</td>
+								<td>(Optional) Indicates whether firmware is controlled. Must be a boolean value (optional).</td>
+							</tr>
+							<tr>
+								<td>data[].messageStructure</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The message structure of communication policy must be non empty string</td>
+							</tr>
+							<tr>
+								<td>data[].confMessageStructure</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The confirmation message structure of communication policy must be non empty string</td>
+							</tr>
+							<tr>
+								<td>data[].defaultConfMessage</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The default confirmation message structure of communication policy</td>
+							</tr>
+							<tr>
+								<td>data[].messageFormat</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional)The message format of communication policy ID</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="overflow-hidden content-section" id="update-many-MessagingPolicies">
+					<h2>11. Update Many Messaging Policies</h2>
+					<p>
+						This API is used to update a Messaging Policies and return the updated Messaging Policies in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br /><br />
+						<code class="higlighted break-word"
+							>PATCH /api/:organizationId/communicationPolicy/update/many/:communicationPolicyId/messagingPolicy → {Array.&lt;MessagingPolicy&gt;}
+						</code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of messaging policy input object.</td>
+							</tr>
+							<tr>
+								<td>data[].topic</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The topic name. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].QOS</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The Quality of Service (QOS) level. Must be an integer in the range 0-3, and is required.</td>
+							</tr>
+							<tr>
+								<td>data[].messageType</td>
+								<td>
+									"ON_OFF" | "SET_ADJUST" | "GETDATA" | "TOGGLE" <br />| "CONTROL" | "CONNECTION" | "START_STOP" | "LOCK_UNLOCK"
+									<br />| "ARM_DISARM" | "EMERGENCY" | "PLAYBACK" | "QUERY" <br />| "CALIBRATION" | "DIAGNOSTIC" | "UPDATE" |
+									"STATUS" <br />| "NOTIFICATION" | "CONFIGURATION" | "AUTHENTICATE" | "GROUPING" <br />| "SCENE" | "GEOFENCING" |
+									"SESSION"
+								</td>
+								<td>optional</td>
+								<td>(Optional) The message type. Must be a non-empty string and one of the valid message types.</td>
+							</tr>
+							<tr>
+								<td>data[].policyType</td>
+								<td>"BOOT" | "SYNC" | "QUERY" | "EXECUTE"</td>
+								<td>optional</td>
+								<td>(Optional) The policy type. Must be a non-empty string and one of the valid policy types.</td>
+							</tr>
+							<tr>
+								<td>data[].parameterIds</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>(Optional) An array of parameter IDs.</td>
+							</tr>
+							<tr>
+								<td>data[].payloadFormat</td>
+								<td>string</td>
+								<td></td>
+								<td>(Optional) The payload format. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>data[].confPayloadFormat</td>
+								<td>string</td>
+								<td></td>
+								<td>(Optional) The confirmation payload format. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>data[].commandType</td>
+								<td>"SUBSCRIBE" | "PUBLISH" | "POST" | "GET"</td>
+								<td></td>
+								<td>(Optional) The command type. Must be a string and one of the valid command types.</td>
+							</tr>
+							<tr>
+								<td>data[].retain</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) Indicates whether the message should be retained.</td>
+							</tr>
+							<tr>
+								<td>data[].messageExpiry</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The message expiry. Must be an integer.</td>
+							</tr>
+							<tr>
+								<td>data[].correlationData</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The correlation data. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>data[].frequency</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>(Optional) The frequency. Must be an integer.</td>
+							</tr>
+							<tr>
+								<td>data[].isLoggedMessage</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The frequency. Must be an integer.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="delete-CommunicationPolicy">
+					<h2>12. Delete Communication Policy</h2>
+					<p>
+						This API is used to delete a Communication Policy and return the deleted Communication Policy in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br /><br />
+						<code class="higlighted break-word"
+							>DELETE /api/:organizationId/communicationPolicy/delete/one/:communicationPolicyId → {CommunicationPolicy}
+						</code>
+					</p>
+					<br />
+				</div>
+
+				<div class="overflow-hidden content-section" id="delete-MessagingPolicy">
+					<h2>13. Delete Messaging Policy</h2>
+					<p>
+						This API is used to delete a Messaging Policy and return the deleted Messaging Policy in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br />
+						<strong>:messagingPolicyId</strong> should be replaced with the Id of the Messaging Policy.<br /><br />
+						<code class="higlighted break-word"
+							>DELETE /api/:organizationId/communicationPolicy/delete/one/:communicationPolicyId/:messagingPolicyId → {MessagingPolicy}
+						</code>
+					</p>
+					<br />
+				</div>
+
+				<div class="overflow-hidden content-section" id="delete-many-CommunicationPolicies">
+					<h2>14. Delete Many Communication Policy</h2>
+					<p>
+						This API is used to delete multiple Communication Policies and return the deleted Communication Policies in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">DELETE /api/:organizationId/communicationPolicy/delete/many → {Array.&lt;CommunicationPolicy&gt;} </code>
+					</p>
+
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ids</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>Array of Communication Policy Ids to be deleted.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="overflow-hidden content-section" id="delete-many-MessagingPolicies">
+					<h2>15. Delete Many Messaging Policies</h2>
+					<p>
+						This API is used to delete multiple Messaging Policies and return the deleted Messaging Policies in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:communicationPolicyId</strong> should be replaced with the Id of the Communication Policy.<br /><br />
+						<code class="higlighted break-word"
+							>DELETE /api/:organizationId/communicationPolicy/delete/many/:communicationPolicyId/messagingPolicy → {Array.&lt;MessagingPolicy&gt;}
+						</code>
+					</p>
+
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ids</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>Array of Communication Policy Ids to be deleted.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="errors">
+					<h2>Errors</h2>
+					<p>These above APIs might run into errors sometime, here below are the different errors:</p>
+					<p><strong>Throw - Type:</strong> Error</p>
+				</div>
+
+				<div class="overflow-hidden content-section" id="errors">
+					<h2>Type Definition</h2>
+					<p><strong>communicationPolicyAndBaseMessagingPoliciesResult</strong></p>
+					<p><strong>Type:</strong> Object</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Number</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>communicationPolicy</td>
+								<td>communicationPolicy</td>
+								<td>The Parameter object.</td>
+							</tr>
+							<tr>
+								<td>baseMessagingPolicies</td>
+								<td>baseMessagingPolicies</td>
+								<td>The Vendor object.</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Number</th>
+								<th>Return Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>communicationPolicyAndBaseMessagingPoliciesResult</td>
+								<td>
+									Express Response object includes communication policy and Base Messaging policies for sending the server response.
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>MessagingPolicy</td>
+								<td>Express Response object includes Messaging policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Array.&lt;communicationPolicyAndBaseMessagingPoliciesResult&gt;</td>
+								<td>
+									Express Response array of objects includes Communication Policy and Messaging Policies for sending the server
+									response.
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Array.&lt;MessagingPolicy&gt;</td>
+								<td>Express Response object includes Messaging policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>CommunicationPolicy</td>
+								<td>Express Response object includes Communication Policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>MessagingPolicy</td>
+								<td>Express Response of object includes Messaging Policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Array.&lt;CommunicationPolicy&gt;</td>
+								<td>Express Response object includes Communication Policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>CommunicationPolicy</td>
+								<td>Express Response object includes Communication Policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>MessagingPolicy</td>
+								<td>Express Response object includes Messaging policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Array.&lt;CommunicationPolicy&gt;</td>
+								<td>Express Response object includes Messaging policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td>Array.&lt;MessagingPolicy&gt;</td>
+								<td>Express Response array object includes Messaging policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td>CommunicationPolicy</td>
+								<td>Express Response object includes Communication Policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td>MessagingPolicy</td>
+								<td>Express Response of object includes Messaging Policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>14</td>
+								<td>Array.&lt;CommunicationPolicy&gt;</td>
+								<td>Express Response array of objects includes Communication Policy for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>15</td>
+								<td>Array.&lt;MessagingPolicy&gt;</td>
+								<td>Express Response array of objects includes Messaging Policy for sending the server response.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

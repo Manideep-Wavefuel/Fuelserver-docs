@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Device - Documentation</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ticlekiwi" />
+
+		<meta http-equiv="cleartype" content="on" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/hightlightjs-dark.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" media="all" />
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+	</head>
+
+	<body class="one-content-column-version">
+		<div class="left-menu">
+			<div class="content-logo">
+				<div class="logo">
+					<img
+						alt="platform by Emily van den Heever from the Noun Project"
+						title="platform by Emily van den Heever from the Noun Project"
+						src="images/logo.png"
+						height="32"
+					/>
+					<span>Device Document</span>
+				</div>
+				<button class="burger-menu-icon" id="button-menu-mobile">
+					<svg width="34" height="34" viewBox="0 0 100 100">
+						<path
+							class="line line1"
+							d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+						></path>
+						<path class="line line2" d="M 20,50 H 80"></path>
+						<path
+							class="line line3"
+							d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+						></path>
+					</svg>
+				</button>
+			</div>
+			<div class="content-infos"><a class="info" href="index.html" style="font-weight: bold; color: #034c8f">&larr; Home</a></div>
+			<div class="mobile-menu-closer"></div>
+			<div class="content-menu">
+				<div class="content-infos">
+					<div class="info"><b>Version:</b> 1.0.1</div>
+					<div class="info"><b>Last Updated:</b> 19th Jan, 2024</div>
+				</div>
+
+				<nav>
+					<ul>
+						<li class="scroll-to-link active">
+							<a style="font-weight: bold">I. Navigation</a>
+						</li>
+						<li>
+							<a href="./Parameter.html">1. Parameter</a>
+						</li>
+						<li>
+							<a href="./ItemType.html">2. Item Type</a>
+						</li>
+						<li>
+							<a href="./CommunicationPolicy.html">3. Communication Policy</a>
+						</li>
+						<li>
+							<a href="./Item.html">4. Item</a>
+						</li>
+						<li>
+							<a href="./Action.html">5. Action</a>
+						</li>
+					</ul>
+				</nav>
+
+				<ul>
+					<li class="scroll-to-link active" data-target="get-started">
+						<a style="font-weight: bold">II. API</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-Device">
+						<a>1. Create Device</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-many-Devices">
+						<a>2. Create Many Devices</a>
+					</li>
+					<li class="scroll-to-link" data-target="read-Device">
+						<a>3. Read Device</a>
+					</li>
+					<li class="scroll-to-link" data-target="read-many-Devices">
+						<a>4. Read Many Device</a>
+					</li>
+					<li class="scroll-to-link" data-target="update-Device">
+						<a>5. Update Device</a>
+					</li>
+					<li class="scroll-to-link" data-target="update-many-Devices">
+						<a>6. Update Many Devices</a>
+					</li>
+					<li class="scroll-to-link" data-target="delete-Device">
+						<a>7. Delete Devices</a>
+					</li>
+					<li class="scroll-to-link" data-target="delete-many-Devices">
+						<a>8. Delete Many Devices</a>
+					</li>
+					<li class="scroll-to-link" data-target="errors">
+						<a style="font-weight: bold">III. Errors</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="content">
+				<div class="overflow-hidden content-section" id="get-started">
+					<h1>DEVICE</h1>
+					<p>
+						<strong>Devices</strong> is the physical object with functionalities or features based on the item it belongs to. Lets say
+						Philips lightbulb is the item, there can be multiple lightbulbs in Philips lightbulb item each lightbulb is a device.
+					</p>
+					<p>
+						This documents helps you to understand and implement Device. These APIs are specialized tools that help you to perform certain
+						operations on Device.
+					</p>
+					<p>
+						With the Help of these APIs you can create, read, update, and delete Device. The below is the API documentation which contains
+						API url paths, message structure and the description on what the API does. If there is any issue, you can refer to the
+						<strong class="scroll-to-link" data-target="errors">Errors</strong> section to get good insights on the error.
+					</p>
+				</div>
+				<hr />
+				<div class="overflow-hidden content-section" id="create-Device">
+					<h2>1. Create Device</h2>
+					<p>
+						This API is used to create a Device. It takes the below mentioned API parameters as input and returns the newly created Device
+						and its aws thing type in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/device/create/one → {CreateDeviceReturn} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>deviceName</td>
+								<td>string</td>
+								<td></td>
+								<td>The name of the device. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>itemId</td>
+								<td>string</td>
+								<td></td>
+								<td>The ID of the associated item. Must be a non-empty string and a valid MongoDB ID.</td>
+							</tr>
+							<tr>
+								<td>projectId</td>
+								<td>string</td>
+								<td></td>
+								<td>The ID of the associated project. Must be a non-empty string and a valid PostgreSQL ID.</td>
+							</tr>
+							<tr>
+								<td>serialNumber</td>
+								<td>string</td>
+								<td></td>
+								<td>The serial number of the device. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>metadata</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>(Optional) The metadata for the device. Must be an object and not empty.</td>
+							</tr>
+							<tr>
+								<td>locationId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The ID of the associated location. Must be a string, not empty, and a valid PostgreSQL ID.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="create-many-Devices">
+					<h2>2. Create Many Devices</h2>
+					<p>
+						This API is used to create multiple Devices. It takes the below mentioned API parameters as input and returns the newly
+						created Devices and their AWS thing types in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/device/create/many → {Array.&lt;CreateDeviceReturn&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of device input object.</td>
+							</tr>
+							<tr>
+								<td>data[].deviceName</td>
+								<td>string</td>
+								<td></td>
+								<td>The name of the device. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].itemId</td>
+								<td>string</td>
+								<td></td>
+								<td>The ID of the associated item. Must be a non-empty string and a valid MongoDB ID.</td>
+							</tr>
+							<tr>
+								<td>data[].projectId</td>
+								<td>string</td>
+								<td></td>
+								<td>The ID of the associated project. Must be a non-empty string and a valid PostgreSQL ID.</td>
+							</tr>
+							<tr>
+								<td>data[].serialNumber</td>
+								<td>string</td>
+								<td></td>
+								<td>The serial number of the device. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>metadata</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>(Optional) The metadata for the device. Must be an object and not empty.</td>
+							</tr>
+							<tr>
+								<td>locationId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The ID of the associated location. Must be a string, not empty, and a valid PostgreSQL ID.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="read-Device">
+					<h2>3. Read Device</h2>
+					<p>
+						This API is used to read a Device. It takes the parameter Id as input in the url and returns the requested Device in
+						response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:deviceId</strong> should be replaced with the Id of the Device.<br /><br />
+						<code class="higlighted break-word">GET /api/:organizationId/device/read/one/:deviceId → {Device} </code>
+					</p>
+					<br />
+				</div>
+				<div class="overflow-hidden content-section" id="read-many-Devices">
+					<h2>4. Read Many Devices</h2>
+					<p>
+						This API is used to read multiple Devices. It takes below parameters as input and return the Devices in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/device/read/many → {Array.&lt;Device&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>where</td>
+								<td>Object</td>
+								<td></td>
+								<td>The condition object for querying records with device fields.</td>
+							</tr>
+							<tr>
+								<td>orderBy</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>Use orderBy to sort a list of records or a nested list of records by a particular field or set of fields.</td>
+							</tr>
+							<tr>
+								<td>select</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>Use select to return specific fields by assigning true to it.</td>
+							</tr>
+							<tr>
+								<td>skip</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>uses skip to skip a certain number of results</td>
+							</tr>
+							<tr>
+								<td>take</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>uses take to select a limited range</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="update-Device">
+					<h2>5. Update Device</h2>
+					<p>
+						This API is used to update a Device and return the updated Device in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:deviceId</strong> should be replaced with the Id of the Device.<br /><br />
+						<code class="higlighted break-word">PATCH /api/:organizationId/device/update/one/:deviceId → {Device} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>deviceName</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The name of the device. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>projectId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The ID of the associated project. Must be a non-empty string and a valid PostgreSQL ID.</td>
+							</tr>
+							<tr>
+								<td>metadata</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>(Optional) The metadata for the device. Must be an object and not empty.</td>
+							</tr>
+							<tr>
+								<td>locationId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The ID of the associated location. Must be a string, not empty, and a valid PostgreSQL ID.</td>
+							</tr>
+							<tr>
+								<td>provisionState</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>
+									(Optional) The provision state of the device. Must be a string, not empty, and one of the valid provision states
+									(e.g., "PROVISIONED", "DEPROVISIONED", etc.).
+								</td>
+							</tr>
+							<tr>
+								<td>deviceStatus</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>
+									(Optional) The status of the device. Must be a string, not empty, and one of the valid device states (e.g.,
+									"ACTIVE", "INACTIVE", etc.).
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="update-many-Devices">
+					<h2>6. Update Many Devices</h2>
+					<p>
+						This API is used to update a Devices and return the updated Devices in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">PATCH /api/:organizationId/device/update/many/:deviceId → {Array.&lt;Device&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of device input object.</td>
+							</tr>
+							<tr>
+								<td>data[].id</td>
+								<td>string</td>
+								<td></td>
+								<td>The id of the device. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].deviceName</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The name of the device. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].projectId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The ID of the associated project. Must be a non-empty string and a valid PostgreSQL ID.</td>
+							</tr>
+							<tr>
+								<td>data[].metadata</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>(Optional) The metadata for the device. Must be an object and not empty.</td>
+							</tr>
+							<tr>
+								<td>data[].locationId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The ID of the associated location. Must be a string, not empty, and a valid PostgreSQL ID.</td>
+							</tr>
+							<tr>
+								<td>data[].provisionState</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>
+									(Optional) The provision state of the device. Must be a string, not empty, and one of the valid provision states
+									(e.g., "PROVISIONED", "DEPROVISIONED", etc.).
+								</td>
+							</tr>
+							<tr>
+								<td>data[].deviceStatus</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>
+									(Optional) The status of the device. Must be a string, not empty, and one of the valid device states (e.g.,
+									"ACTIVE", "INACTIVE", etc.).
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="delete-Device">
+					<h2>7. Delete Device</h2>
+					<p>
+						This API is used to delete a Device and return the deleted Device in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:deviceId</strong> should be replaced with the Id of the Device.<br /><br />
+						<code class="higlighted break-word">DELETE /api/:organizationId/device/delete/one/:deviceId → {Device} </code>
+					</p>
+					<br />
+				</div>
+
+				<div class="overflow-hidden content-section" id="delete-many-Devices">
+					<h2>8. Delete Many Devices</h2>
+					<p>
+						This API is used to delete multiple Devices and return the deleted Devices in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">DELETE /api/:organizationId/device/delete/many → {Array.&lt;Device&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ids</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>Array of Device Ids to be deleted.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="errors">
+					<h2>Errors</h2>
+					<p>These above APIs might run into errors sometime, here below are the different errors:</p>
+					<p><strong>Throw - Type:</strong> Error</p>
+				</div>
+
+				<div class="overflow-hidden content-section" id="errors">
+					<h2>Type Definition</h2>
+					<p><strong>CreateDeviceReturn</strong></p>
+					<p><strong>Type:</strong> Object</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Number</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Device</td>
+								<td>Device</td>
+								<td>The Device object.</td>
+							</tr>
+							<tr>
+								<td>Components</td>
+								<td>Components</td>
+								<td>The Component objects.</td>
+							</tr>
+							<tr>
+								<td>ActionTemplates</td>
+								<td>ActionTemplates</td>
+								<td>The Parameter objects.</td>
+							</tr>
+							<tr>
+								<td>ConnectionPolicy</td>
+								<td>ConnectionPolicy</td>
+								<td>The Vendor object.</td>
+							</tr>
+							<tr>
+								<td>Certificate</td>
+								<td>Certificate</td>
+								<td>The Vendor object.</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Number</th>
+								<th>Return Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>CreateDeviceReturn</td>
+								<td>
+									Express Response object includes Device and its Components, ActionTemplates, ConnectionPolicy, Certificate for
+									sending the server response.
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Array.&lt;CreateDeviceReturn&gt;</td>
+								<td>
+									Express Response array of objects includes Device and its Components, ActionTemplates, ConnectionPolicy,
+									Certificate for sending the server response.
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Device</td>
+								<td>Express Response object includes Device for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Array.&lt;Device&gt;</td>
+								<td>Express Response array of objects includes Device for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Device</td>
+								<td>Express Response object includes Device for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Array.&lt;Device&gt;</td>
+								<td>Express Response array of objects includes Device for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Device</td>
+								<td>Express Response object includes Device for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Array.&lt;Device&gt;</td>
+								<td>Express Response array of objects includes Device for sending the server response.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

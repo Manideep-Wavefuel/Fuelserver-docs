@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Action - Documentation</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ticlekiwi" />
+
+		<meta http-equiv="cleartype" content="on" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/hightlightjs-dark.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" media="all" />
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+	</head>
+
+	<body class="one-content-column-version">
+		<div class="left-menu">
+			<div class="content-logo">
+				<div class="logo">
+					<img
+						alt="platform by Emily van den Heever from the Noun Project"
+						title="platform by Emily van den Heever from the Noun Project"
+						src="images/logo.png"
+						height="32"
+					/>
+					<span>Action Document</span>
+				</div>
+				<button class="burger-menu-icon" id="button-menu-mobile">
+					<svg width="34" height="34" viewBox="0 0 100 100">
+						<path
+							class="line line1"
+							d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+						></path>
+						<path class="line line2" d="M 20,50 H 80"></path>
+						<path
+							class="line line3"
+							d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+						></path>
+					</svg>
+				</button>
+			</div>
+			<div class="content-infos"><a class="info" href="index.html" style="font-weight: bold; color: #034c8f">&larr; Home</a></div>
+			<div class="mobile-menu-closer"></div>
+			<div class="content-menu">
+				<div class="content-infos">
+					<div class="info"><b>Version:</b> 1.0.1</div>
+					<div class="info"><b>Last Updated:</b> 19th Jan, 2024</div>
+				</div>
+
+				<nav>
+					<ul>
+						<li class="scroll-to-link active">
+							<a style="font-weight: bold">I. Navigation</a>
+						</li>
+						<li>
+							<a href="./Action.html">1. Parameter</a>
+						</li>
+						<li>
+							<a href="./Itemtype.html">2. Item Type</a>
+						</li>
+						<li>
+							<a href="./CommunicationPolicy.html">3. Communication Policy</a>
+						</li>
+						<li>
+							<a href="./Item.html">4. Item</a>
+						</li>
+						<li>
+							<a href="./Device.html">5. Device</a>
+						</li>
+					</ul>
+				</nav>
+
+				<ul>
+					<li class="scroll-to-link active" data-target="get-started">
+						<a style="font-weight: bold">II. API</a>
+					</li>
+					<li class="scroll-to-link" data-target="create-Action">
+						<p>1. Create Action</p>
+					</li>
+					<li class="scroll-to-link" data-target="create-many-Actions">
+						<p>2. Create Many Actions</p>
+					</li>
+					<li class="scroll-to-link" data-target="read-Action">
+						<p>3. Read Action</p>
+					</li>
+					<li class="scroll-to-link" data-target="read-many-Actions">
+						<p>4. Read Many Actions</p>
+					</li>
+					<li class="scroll-to-link" data-target="update-Action">
+						<p>5. Update Actions</p>
+					</li>
+					<li class="scroll-to-link" data-target="update-many-Actions">
+						<p>6. Update Many Action</p>
+					</li>
+					<li class="scroll-to-link" data-target="delete-Action">
+						<p>7. Delete Action</p>
+					</li>
+					<li class="scroll-to-link" data-target="delete-many-Actions">
+						<p>8. Delete Many Actions</p>
+					</li>
+					<li class="scroll-to-link" data-target="errors">
+						<a style="font-weight: bold">III. Errors</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="content">
+				<div class="overflow-hidden content-section" id="get-started">
+					<h1>Action</h1>
+					<p>
+						<strong>Actions</strong> are specific tasks or operations that can be performed by a device or group of devices. They are
+						triggered by user input, pre-defined conditions, or communication protocols. An "Action" could be turning on a light based on
+						a motion sensor detection, user sending a message to fan to increase its speed, etc.
+					</p>
+					<p>
+						This documents helps you to understand and implement Actions. These APIs are specialized tools that help you to perform
+						certain operations on Actions.
+					</p>
+					<p>
+						With the Help of these APIs you can create, read, update, and delete Actions. The below is the API documentation which
+						contains API url paths, message structure and the description on what the API does. If there is any issue, you can refer to
+						the <strong class="scroll-to-link" data-target="errors">Errors</strong> section to get good insights on the error.
+					</p>
+				</div>
+				<hr />
+				<div class="overflow-hidden content-section" id="create-Action">
+					<h2>1. Create Action</h2>
+					<p>
+						This API is used to create an Action. It takes the below mentioned API parameters as input and returns the newly created
+						Action in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/action/create/one → {CreateActionReturn} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>action</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of actions. Must not be empty.</td>
+							</tr>
+							<tr>
+								<td>action[].topic</td>
+								<td>string</td>
+								<td></td>
+								<td>The topic for each action. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>action[].payload</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>The payload for each action. Must be a non-empty object.</td>
+							</tr>
+							<tr>
+								<td>action[].options</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>
+									(Optional) The options for each action. Must be an object.
+
+									<!-- Nested Table -->
+									<table>
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Type</th>
+												<th>Attribute</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>qos</td>
+												<td>number | undefined</td>
+												<td>optional</td>
+												<td>(Optional) The QOS value for each action. Must be a number in the range of 0-3.</td>
+											</tr>
+											<tr>
+												<td>retain</td>
+												<td>boolean</td>
+												<td>optional</td>
+												<td>(Optional) The Retain value for each action. Must be a boolean.</td>
+											</tr>
+											<tr>
+												<td>messageExpiry</td>
+												<td>number</td>
+												<td>optional</td>
+												<td>
+													(Optional) The message expiry for each action. Must be a numeric value representing the number of
+													seconds before expiry.
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- Nested Table -->
+								</td>
+							</tr>
+							<tr>
+								<td>isUserGenerated</td>
+								<td>boolean</td>
+								<td></td>
+								<td>The isUserGenerated flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>isAutomated</td>
+								<td>boolean</td>
+								<td></td>
+								<td>The isAutomated flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>accountId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The account ID. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>actionType</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The action type. Must be one of the valid action types.</td>
+							</tr>
+							<tr>
+								<td>metadata</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>(Optional) The metadata for the action. Must be an object.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="create-many-Actions">
+					<h2>2. Create Many Actions</h2>
+					<p>
+						This API is used to create multiple Actions. It takes the below mentioned API parameters as input and returns the newly
+						created Actions and their vendor in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/action/create/many → {Array.&lt;CreateActionReturn&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of action input object.</td>
+							</tr>
+							<tr>
+								<td>data[].action</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of actions. Must not be empty.</td>
+							</tr>
+							<tr>
+								<td>data[].action[].topic</td>
+								<td>string</td>
+								<td></td>
+								<td>The topic for each action. Must be a non-empty string.</td>
+							</tr>
+							<tr>
+								<td>data[].action[].payload</td>
+								<td>object</td>
+								<td></td>
+								<td>The payload for each action. Must be a non-empty object.</td>
+							</tr>
+							<tr>
+								<td>data[].action[].options</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>
+									(Optional) The options for each action. Must be an object.
+
+									<!-- Nested Table -->
+									<table>
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Type</th>
+												<th>Attribute</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>qos</td>
+												<td>number</td>
+												<td>optional</td>
+												<td>(Optional) The QOS value for each action. Must be a number in the range of 0-3.</td>
+											</tr>
+											<tr>
+												<td>retain</td>
+												<td>boolean</td>
+												<td>optional</td>
+												<td>(Optional) The Retain value for each action. Must be a boolean.</td>
+											</tr>
+											<tr>
+												<td>messageExpiry</td>
+												<td>number</td>
+												<td>optional</td>
+												<td>
+													(Optional) The message expiry for each action. Must be a numeric value representing the number of
+													seconds before expiry.
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- Nested Table -->
+								</td>
+							</tr>
+							<tr>
+								<td>data[].isUserGenerated</td>
+								<td>boolean</td>
+								<td></td>
+								<td>The isUserGenerated flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>data[].isAutomated</td>
+								<td>boolean</td>
+								<td></td>
+								<td>The isAutomated flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>data[].accountId</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The account ID. Must be a string.</td>
+							</tr>
+							<tr>
+								<td>data[].actionType</td>
+								<td>string</td>
+								<td>optional</td>
+								<td>(Optional) The action type. Must be one of the valid action types.</td>
+							</tr>
+							<tr>
+								<td>data[].metadata</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>(Optional) The metadata for the action. Must be an object.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="read-Action">
+					<h2>3. Read Action</h2>
+					<p>
+						This API is used to read an Action. It takes the Action Id as input in the url and returns the requested Action in
+						response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:actionId</strong> should be replaced with the Id of the Device.<br /><br />
+						<code class="higlighted break-word">GET /api/:organizationId/action/read/one/:actionId → {Action} </code>
+					</p>
+					<br />
+				</div>
+				<div class="overflow-hidden content-section" id="read-many-Actions">
+					<h2>4. Read Many Actions</h2>
+					<p>
+						This API is used to read multiple Actions. It takes below parameters as input and return the Action in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">POST /api/:organizationId/action/read/many → {Array.&lt;Action&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>where</td>
+								<td>Object</td>
+								<td></td>
+								<td>The condition object for querying records with action fields.</td>
+							</tr>
+							<tr>
+								<td>orderBy</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>Use orderBy to sort a list of records or a nested list of records by a particular field or set of fields.</td>
+							</tr>
+							<tr>
+								<td>select</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>Use select to return specific fields by assigning true to it.</td>
+							</tr>
+							<tr>
+								<td>skip</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>uses skip to skip a certain number of results.</td>
+							</tr>
+							<tr>
+								<td>take</td>
+								<td>number</td>
+								<td>optional</td>
+								<td>uses take to select a limited range.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="update-Action">
+					<h2>5. Update Action</h2>
+					<p>
+						This API is used to update an Action and return the updated Action in the response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:actionId</strong> should be replaced with the Id of the Device.<br /><br />
+						<code class="higlighted break-word">PATCH /api/:organizationId/action/update/one/:actionId → {Action} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>status</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The status flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>isUserGenerated</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The isUserGenerated flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>isAutomated</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The isAutomated flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>isValid</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The isValid flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>metadata</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>(Optional) The metadata for the action. Must be an object.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="update-many-Actions">
+					<h2>6. Update Many Actions</h2>
+					<p>
+						This API is used to update multiple Actions and return the updated Actions in response<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">PATCH /api/:organizationId/action/update/many → {Array.&lt;Action&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Attribute</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>Array.&lt;object&gt;</td>
+								<td></td>
+								<td>The array of action input object.</td>
+							</tr>
+							<tr>
+								<td>data[].status</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The status flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>data[].isUserGenerated</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The isUserGenerated flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>data[].isAutomated</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The isAutomated flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>data[].isValid</td>
+								<td>boolean</td>
+								<td>optional</td>
+								<td>(Optional) The isValid flag. Must be a boolean.</td>
+							</tr>
+							<tr>
+								<td>data[].metadata</td>
+								<td>object</td>
+								<td>optional</td>
+								<td>(Optional) The metadata for the action. Must be an object.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="delete-Action">
+					<h2>7. Delete Action</h2>
+					<p>
+						This API is used to delete an Action and return the deleted Action in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br />
+						<strong>:actionId</strong> should be replaced with the Id of the Action.<br /><br />
+						<code class="higlighted break-word">DELETE /api/:organizationId/action/delete/one/:actionId → {Action} </code>
+					</p>
+					<br />
+				</div>
+				<div class="overflow-hidden content-section" id="delete-many-Actions">
+					<h2>8. Delete Many Actions</h2>
+					<p>
+						This API is used to delete multiple Actions and return the deleted Actions in response.<br />
+						<strong>:organizationId</strong> should be replaced with the Id of the Organization.<br /><br />
+						<code class="higlighted break-word">DELETE /api/:organizationId/action/delete/many → {Array.&lt;Action&gt;} </code>
+					</p>
+					<br />
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>ids</td>
+								<td>Array.&lt;string&gt;</td>
+								<td>Array of Action Ids to be deleted.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="overflow-hidden content-section" id="errors">
+					<h2>Errors</h2>
+					<p>These above APIs might run into errors sometime, here below are the different errors:</p>
+					<p><strong>Throw - Type:</strong> Error</p>
+				</div>
+
+				<div class="overflow-hidden content-section" id="errors">
+					<h2>Type Definition</h2>
+					<p><strong>CreateActionReturn</strong></p>
+					<p><strong>Type:</strong> Array.&lt;Object&gt;</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Number</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>transactions</td>
+								<td>Array.&lt;Transaction&gt;</td>
+								<td>The Device object.</td>
+							</tr>
+							<tr>
+								<td>actionSpec</td>
+								<td>ActionSpec</td>
+								<td>The actionSpec object.</td>
+							</tr>
+							<tr>
+								<td>publishResponse</td>
+								<td>PublishResponse</td>
+								<td>The publishResponse object.</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Number</th>
+								<th>Return Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Array.&lt;CreateActionReturn&gt;</td>
+								<td>Express Response array of objects includes Action for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>CreateActionReturn</td>
+								<td>Express Response array of objects includes Action for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Action</td>
+								<td>Express Response object includes Action for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Array.&lt;Action&gt;</td>
+								<td>Express Response array of object includes Actions for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Action</td>
+								<td>Express Response object includes Action for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Array.&lt;Action&gt;</td>
+								<td>Express Response object includes Action for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Action</td>
+								<td>Express Response object includes Action for sending the server response.</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Array.&lt;Action&gt;</td>
+								<td>Express Response object includes Action for sending the server response.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

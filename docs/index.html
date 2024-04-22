@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>API - Documentation</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ticlekiwi" />
+
+		<meta http-equiv="cleartype" content="on" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/hightlightjs-dark.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" media="all" />
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+	</head>
+
+	<body class="one-content-column-version">
+		<div class="left-menu">
+			<div class="content-logo">
+				<div class="logo">
+					<img
+						alt="platform by Emily van den Heever from the Noun Project"
+						title="platform by Emily van den Heever from the Noun Project"
+						src="images/logo.png"
+						height="32"
+					/>
+					<span>API Documentation</span>
+				</div>
+				<button class="burger-menu-icon" id="button-menu-mobile">
+					<svg width="34" height="34" viewBox="0 0 100 100">
+						<path
+							class="line line1"
+							d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+						></path>
+						<path class="line line2" d="M 20,50 H 80"></path>
+						<path
+							class="line line3"
+							d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+						></path>
+					</svg>
+				</button>
+			</div>
+			<div class="mobile-menu-closer"></div>
+			<div class="content-menu">
+				<div class="content-infos">
+					<div class="info"><b>Version:</b> 1.0.1</div>
+					<div class="info"><b>Last Updated:</b> 19th Jan, 2024</div>
+				</div>
+				<nav>
+					<ul>
+						<li class="scroll-to-link">
+							<a style="font-weight: bold">I. Navigation</a>
+						</li>
+						<li>
+							<a href="./Parameter.html">1. Parameter</a>
+						</li>
+						<li>
+							<a href="./Itemtype.html">2. Item Type</a>
+						</li>
+						<li>
+							<a href="./CommunicationPolicy.html">3. Communication Policy</a>
+						</li>
+						<li>
+							<a href="./Item.html">4. Item</a>
+						</li>
+						<li>
+							<a href="./Device.html">5. Device</a>
+						</li>
+						<li>
+							<a href="./Action.html">6. Action</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<div class="content-page">
+			<div class="content">
+				<div class="overflow-hidden content-section" id="get-started">
+					<h1>I. Welcome</h1>
+					<p>
+						Empower your business with complete control over your connected devices with this comprehensive API documentation. This
+						toolkit provides the insights and tools necessary to manage your IoT middleware effectively, enabling seamless integration,
+						efficient device management, and robust automation capabilities.
+					</p>
+					<p><strong>Click the links in the Nav bar to access detailed documentation of each API</strong></p>
+				</div>
+				<div class="overflow-hidden content-section" id="delete-Device">
+					<a href="./Parameter.html"><h2>1. Parameter</h2></a>
+					<p>
+						<a href="./Parameter.html"><strong>Parameters</strong></a>
+						are specific criteria or variables used for validating data sent to or received from a device. They define the characteristics
+						or constraints that incoming or outgoing data must adhere to. For example, in a 'Light Bulb' item type, parameters might
+						include criteria for acceptable brightness levels, color temperatures, and dimming times. These parameters ensure that the
+						data being processed meets certain standards or requirements.
+					</p>
+					<a href="./Itemtype.html"><h2>2. Item Type</h2></a>
+					<p>
+						<a href="./Itemtype.html"><strong>Item Type</strong></a> define common properties and functionalities that multiple items of the same type share. For
+						example, an "Item Type" could be "Light Bulb," which would define properties like brightness, color temperature, and on/off
+						state.
+					</p>
+
+					<a href="./CommunicationPolicy.html"><h2>3. Communication Policy</h2></a>
+					<p>
+						<a href="./CommunicationPolicy.html"><strong>Communication Policies</strong></a> are rules or guidelines that helps the server to understand how to communicate with a
+						device. They define things like messaging policies, routing rules, and security protocols. For example, a communication policy
+						might specify how can a server turn off/on or change the color or change the brightness of a "Light Bulb".
+					</p>
+					<a href="./Item.html"><h2>4. Item</h2></a>
+					<p>
+						<a href="./Item.html"><strong>Items</strong></a> are models of devices within the IoT middleware. They serve as blueprints, defining the expected
+						properties and functionalities of a device like its communication policy, item type, number of components it contains, each
+						component structure, etc. These can be lightbulbs, sensors, smart appliances, and other gadgets that directly interact with
+						the environment and generate/consume data. Example: A device can be a motion sensor, a smart plug, a connected thermostat, or
+						an air purifier.
+					</p>
+					<a href="./Device.html"><h2>5. Device</h2></a>
+					<p>
+						<a href="./Device.html"><strong>Device</strong></a> is the physical object with functionalities or features based on the item it belongs to. Lets say
+						Philips lightbulb is the item, there can be multiple lightbulbs in Philips lightbulb item each lightbulb is a device.
+					</p>
+					<a href="./Action.html"><h2>6. Action</h2></a>
+					<p>
+						<a href="./Action.html"><strong>Actions</strong></a> are specific tasks or operations that can be performed by a device or group of devices. They are
+						triggered by user input, pre-defined conditions, or communication protocols. An "Action" could be turning on a light based on
+						a motion sensor detection, user sending a message to fan to increase its speed, etc.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
